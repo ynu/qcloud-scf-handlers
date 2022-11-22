@@ -1,5 +1,8 @@
-export { wecomHttpHandler } from './wecom-http-handlers.mjs';
+import { wecomMessageHttpHandler } from './wecom-http-handlers.mjs';
+
+export { wecomHttpHandler, wecomMessageHttpHandler } from './wecom-http-handlers.mjs';
 
 export default {
-  wecomHttpHandler
+  wecomHttpHandler,
+  wecomMessageHttpHandler,
 };

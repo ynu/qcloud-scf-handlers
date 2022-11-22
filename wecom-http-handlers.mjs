@@ -88,9 +88,9 @@ const defaultMsgTypeHandler = (message) => {
  *      - link
  * @param {Object} options 企业微信App相关的配置参数
  */
-export const wecomMessageHttpHandler = (msgTypehandlers = {}, options = {}) => {
+export const wecomMessageHttpHandler = (msgTypeHandlers = {}, options = {}) => {
   
-  const handlers = msgTypehandlers;
+  const handlers = msgTypeHandlers;
   const post = async (body) => {
     info('开始处理post请求');
     const message = await parseMessage(body, options.encoding_aes_key);
@@ -103,6 +103,22 @@ export const wecomMessageHttpHandler = (msgTypehandlers = {}, options = {}) => {
     post,
   }, options);
 }
+
+// const defaultEventHandler = (message) => {
+//   info(`当前事件(${message.Event})暂不处理`);
+//   return {
+//     isBase64Encoded: false,
+//     statusCode: 200,
+//     headers: {},
+//     body: 'pass-event',
+//   };
+// }
+// export const wecomEventHandler = async (handlers = {}) => {
+//   const { Event } = message;
+//   const handler = handlers[Event] || handlers.defaultHandler || defaultEventHandler;
+//   return handler
+  
+// }
  
 export default {
   wecomHttpHandler,

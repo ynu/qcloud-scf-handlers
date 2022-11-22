@@ -1,6 +1,6 @@
 {
   "name": "qcloud-scf-handlers",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "腾讯云云函数（SCF）的入口函数，可以来简化企业微信的消息处理代码",
   "main": "index.mjs",
   "scripts": {

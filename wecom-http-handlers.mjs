@@ -55,7 +55,7 @@ const defaultOthers = (httpMethod) => {
  export const wecomHttpHandler = (methodHandlers = {}, options = {}) => {
    const get = methodHandlers.get || defaultGet;
    const post = methodHandlers.post || defaultPost;
-   return async (event) => {
+   return async (event, context) => {
      const { queryString, body, httpMethod } = event;
      switch (httpMethod) {
        case 'GET':

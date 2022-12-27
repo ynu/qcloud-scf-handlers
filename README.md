@@ -39,16 +39,17 @@ exports.main_handler = async (event, context) => {
 
 
 ### wecomMessageHttpHandler([msgTypeHandlers = {}, options = {}])
-wecomMessageHttpHandler在wecomHttpHandler的基础上更进一步，根据企业微信发送的消息的类型（例如event、text等）进行了处理。
+`wecomMessageHttpHandler`在`wecomHttpHandler`的基础上更进一步，根据企业微信发送的消息的类型（例如`event`、`text`等）进行了处理。
 
 #### 返回值
 返回一个`handler(event, context)`函数作为`main_handler`
 
 #### 参数
-- msgTypeHandlers 可选，针对不同的MsgType进行处理，默认不做任何处理，直接返回200
-  - *消息类型*(message) 处理特定消息，默认不处理
-    - message 消息体
-- `options` 可选，企业微信相关参数，默认由环境变量中读取。具体参见`wecom-common`
+- `msgTypeHandlers` 可选，针对不同的MsgType进行处理，默认不做任何处理，直接返回200
+  - *消息类型*(`message`) 处理特定消息，默认不处理
+    - `message` 消息体
+- `options` 可选，企业微信相关参数，默认由环境变量中读取。至少应该包括:
+  - `encoding_aes_key` 用户解密接收到的消息。具体参见`wecom-common`
 
 #### 示例
 ```

@@ -19,6 +19,6 @@
   "dependencies": {
     "debug": "^4.3.4",
     "wecom-common": "^2.1.2",
-    "wecom-message": "^2.4.2"
+    "wecom-message": "^2.5.0"
   }
 }
